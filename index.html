@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form checkout</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form id="Form1">
+        <h3>Informations livraison</h3>
+        <div class="radio-container">
+          <input
+            class="input-civilite"
+            type="radio"
+            id="madame"
+            name="civilité"
+          />
+          <label class="label-civilite" for="madame">Mme</label>
+
+          <input
+            class="input-civilite"
+            type="radio"
+            id="monsieur"
+            name="civilité"
+          />
+          <label class="label-civilite" for="monsieur">Mr</label>
+        </div>
+        <input type="text" placeholder="Nom*" required />
+        <input type="text" placeholder="Prénom*" required />
+        <input type="text" placeholder="Email*" required />
+        <input type="tel" placeholder="Téléphone*" required />
+
+        <div class="btn-box">
+          <button type="button" id="Next1">Suivant</button>
+        </div>
+      </form>
+      <form id="Form2">
+        <h3>Informations livraison suite</h3>
+        <input type="text" placeholder="Votre Adresse" required />
+        <input type="number" placeholder="Votre code postal" required />
+        <input type="text" placeholder="Ville" required />
+        <input type="text" placeholder="Pays" required />
+
+        <div class="btn-box">
+          <button type="button" id="Back1">Précédent</button>
+          <button type="button" id="Next2">Suivant</button>
+        </div>
+      </form>
+      <form id="Form3">
+        <h3>Informations Paiement</h3>
+        <!-- <input type="text" placeholder="Nom" required />
+        <input type="text" placeholder="Prénom" required />
+        <input type="number" placeholder="Numéro de carte" required /> -->
+        <!--Payment Details Start-->
+        <div class="input_group">
+          <div class="input_box">
+            <input type="radio" name="pay" class="radio" id="bc1" checked />
+            <label for="bc1"
+              ><span> <i class="fa fa-cc-visa"></i>Credit Card</span></label
+            >
+            <input type="radio" name="pay" class="radio" id="bc2" />
+            <label for="bc2"
+              ><span> <i class="fa fa-cc-paypal"></i>Paypal</span></label
+            >
+          </div>
+        </div>
+        <div class="input_group">
+          <div class="input_box">
+            <input
+              type="tel"
+              name=""
+              class="name"
+              placeholder="Numéro de carte"
+              required
+            />
+            <i class="fa fa-credit-card icon"></i>
+          </div>
+        </div>
+        <div class="input_group">
+          <div class="input_box">
+            <input type="tel" name="" class="name" placeholder="CVV" required />
+            <i class="fa fa-user icon"></i>
+          </div>
+        </div>
+        <div class="input_group">
+          <div class="input_box">
+            <div class="input_box">
+              <input type="tel" placeholder="Exp Mois" required class="name" />
+              <i class="fa fa-calendar icon" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="input_box">
+            <input
+              type="number"
+              placeholder="Exp Année"
+              min="2018"
+              required
+              class="name"
+            />
+            <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="input_box">
+          <input
+            type="number"
+            placeholder="Montant"
+            required
+            class="name"
+            min="10"
+          />
+          <i class="fa fa-money icon" aria-hidden="true"></i>
+        </div>
+
+        <div class="btn-box">
+          <button type="button" id="Back2">Précédent</button>
+          <button type="submit">Procéder au paiement</button>
+        </div>
+      </form>
+
+      <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Étape 1</small></div>
+        <div class="step-col"><small>Étape 2</small></div>
+        <div class="step-col"><small>Étape 3</small></div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
